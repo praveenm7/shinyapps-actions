@@ -12,6 +12,5 @@ APP_PATH="$GITHUB_WORKSPACE/$APP_DIR"
 Rscript -e "rsconnect::deployApp(appDir='$APP_PATH', appName='$APP_NAME', launch.browser=FALSE, forceUpdate=TRUE)"
 
 url="https://$SHINY_USERNAME.shinyapps.io/$APP_NAME/"
-echo "::set-output name=url::$url"
-
+echo "url=$url" >> "$GITHUB_OUTPUT"
 exit 0
