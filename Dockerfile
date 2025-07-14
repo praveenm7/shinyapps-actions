@@ -1,4 +1,4 @@
-FROM r-base:4.0.3
+FROM r-base:4.3.1
 
 RUN apt-get update && apt-get install -y --no-install-recommends\
     libcurl4-openssl-dev \
@@ -11,3 +11,4 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
+
